@@ -27,7 +27,6 @@ import javax.imageio.ImageIO;
 public class App extends Application {
 
 
-
     @Override
     public void start(Stage stage) {
 //      Creating MenuBar with Open, Save and Save as buttons under File Menu, 
@@ -67,8 +66,9 @@ public class App extends Application {
                 new FileChooser.ExtensionFilter("Image Files (.gif)", "*.gif")
         );
 
-        //Creating the imageview functionality
+        //Creating the image opening functionality
         openbutton.setOnAction(e -> {
+            fileChooser.setTitle("Open");
             File selectedFile = fileChooser.showOpenDialog(stage);
             try {
                 FileInputStream input = new FileInputStream(selectedFile);
@@ -80,31 +80,92 @@ public class App extends Application {
                 imageView.fitWidthProperty();
                 imageView.preserveRatioProperty();
                 layout.setCenter(imageView);
-                stage.setTitle(selectedFile.getName() + "- Image Viewer");
+                stage.setTitle(selectedFile.getName());
             } catch (FileNotFoundException f) {
                 var fnferrormessage = new Label("File was not found");
                 layout.setCenter(fnferrormessage);
             }
+            //Set default directory to latest files directory
+            String lastOpenedLocation = selectedFile.getParent();
+            fileChooser.setInitialDirectory(new File(lastOpenedLocation));
         });
 
 //        Adding Save As Button functionality
         saveasbutton.setOnAction(e -> {
-            fileChooser.setTitle("Save As");
-            File saveFile = fileChooser.showSaveDialog(stage);
-            Image saveImage = imageView.getImage();
-            BufferedImage bImage = SwingFXUtils.fromFXImage(saveImage, null);
+                fileChooser.setTitle("Save As");
+                File saveFile = fileChooser.showSaveDialog(stage);
+                Image saveImage = imageView.getImage();
+                BufferedImage bImage = SwingFXUtils.fromFXImage(saveImage, null);
 
-            try {//from   w  ww  .  j  a v  a 2 s .  c  o  m
-                ImageIO.write(bImage, "png", saveFile);
-            } catch (IOException f) {
-                throw new RuntimeException(f);
+                try {//from   w  ww  .  j  a v  a 2 s .  c  o  m
+                    ImageIO.write(bImage, "png", saveFile);
+                } catch (IOException f) {
+                    throw new RuntimeException(f);
+                }
+                // Have it use same code in open function to open the new file that it just saved
+                File selectedFile = saveFile;
+                try {
+                    FileInputStream input = new FileInputStream(selectedFile);
+                    Image image = new Image(input);
+                    //Setting image to the image view
+                    imageView.setImage(image);
+                    //Setting the image view parameters
+                    imageView.fitHeightProperty();
+                    imageView.fitWidthProperty();
+                    imageView.preserveRatioProperty();
+                    layout.setCenter(imageView);
+                    stage.setTitle(selectedFile.getName() + "- Image Viewer");
+                } catch (FileNotFoundException f) {
+                    var fnferrormessage = new Label("File was not found");
+                    layout.setCenter(fnferrormessage);
+                }
+                //Set default directory to latest files directory
+                String lastSavedLocation = selectedFile.getParent();
+                fileChooser.setInitialDirectory(new File(lastSavedLocation));
             }
-
-
-        }
         );
 
-    }
+
+    //        Adding Save Button functionality
+        savebutton.setOnAction(e -> {
+//            String saveFile = fileChooser.getInitialDirectory().getPath();
+//            String fileName = stage.getTitle();
+                    String saveFilePath = fileChooser.getInitialDirectory().getPath() + "\\" + stage.getTitle();
+                    File saveFile = new File(saveFilePath);
+                    Image saveImage = imageView.getImage();
+                    BufferedImage bImage = SwingFXUtils.fromFXImage(saveImage, null);
+
+                    try {//from   w  ww  .  j  a v  a 2 s .  c  o  m
+                        ImageIO.write(bImage, "png", saveFile);
+                    } catch (IOException f) {
+                        throw new RuntimeException(f);
+                    }
+                    // Have it use same code in open function to open the new file that it just saved
+                    File selectedFile = saveFile;
+                    try {
+                        FileInputStream input = new FileInputStream(selectedFile);
+                        Image image = new Image(input);
+                        //Setting image to the image view
+                        imageView.setImage(image);
+                        //Setting the image view parameters
+                        imageView.fitHeightProperty();
+                        imageView.fitWidthProperty();
+                        imageView.preserveRatioProperty();
+                        layout.setCenter(imageView);
+                        stage.setTitle(selectedFile.getName() + "- Image Viewer");
+                    } catch (FileNotFoundException f) {
+                        var fnferrormessage = new Label("File was not found");
+                        layout.setCenter(fnferrormessage);
+                    }
+                    //Set default directory to latest files directory
+                    String lastSavedLocation = selectedFile.getParent();
+                    fileChooser.setInitialDirectory(new File(lastSavedLocation));
+                }
+
+        );
+
+
+}
 
     public static void main(String[] args) {
         launch();
