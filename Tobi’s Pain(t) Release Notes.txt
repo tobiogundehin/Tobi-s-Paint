@@ -1,15 +1,15 @@
 Tobi’s Pain(t) Version 0.0.1 -  09/08/2023
 New features:
-  * Image opening functionality ( PNG,JPEG,BMP,GIF supported only)
+  * Image opening functionality ( PNG,JPEG,BMP,GIF supported only) through the use of "Open" button
   * Window maximization, minimization and closing ability
+  * Window now changes name to reflect current file 
+  * “Save As” button functionality with the ability to change file format
+  * “Save” button functionality
 Known issues:
-  * “Save As” button creates a new file but new file does not contain the current image in workspace
-  * “Save” button does not do any action currently
   * Image files of certain dimensions open in a zoomed in position  
 Expected next sprint:
-  * “Save As” and “Save” button functionality
-  * Image resize and rotate tool
-  * Zoom in and zoom out functionality
+  * Image resize to fit in working area 
+  * Line drawing functionality with user-defined line width
 Links:
   * Demo  * Github
 
