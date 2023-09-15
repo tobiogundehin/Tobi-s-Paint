@@ -1,17 +1,30 @@
+Tobi’s Pain(t) Version 0.0.2 -  09/15/2023
+New features:
+  * Sketch Ability through the use of the "Draw" button with user-defined line parameters(Color and Width)
+  * Image will be saved with new sketch 
+Known issues:
+  * Images of certain dimensions don't crop well 
+Expected next sprint:
+  * User-Defined shapes and Straight Line
+  * Keyboard-Shortcuts(With Shortcut cheatsheet in Help menu)
+  * Resizeable Canvas
+  * Dashed Lines
+  * Smart Save
+  * Tabs
+Links:
+  * Demo  * https://github.com/tobiogundehin/Tobi-s-Paint/tree/paint-v-0.0.2
 Tobi’s Pain(t) Version 0.0.1 -  09/08/2023
 New features:
-  * Image opening functionality ( PNG,JPEG,BMP,GIF supported only) through the use of "Open" button
+  * Image opening functionality ( PNG,JPEG,BMP,GIF supported only)
   * Window maximization, minimization and closing ability
-  * Window now changes name to reflect current file 
-  * “Save As” button functionality with the ability to change file format
-  * “Save” button functionality
 Known issues:
+  * “Save As” button creates a new file but new file does not contain the current image in workspace
+  * “Save” button does not do any action currently
   * Image files of certain dimensions open in a zoomed in position  
 Expected next sprint:
-  * Image resize to fit in working area 
-  * Line drawing functionality with user-defined line width
-  * Application Name should remain visible at the top of window despite image being open
-  * Application name change to reflect new functionality
+  * “Save As” and “Save” button functionality
+  * Image resize and rotate tool
+  * Zoom in and zoom out functionality
 Links:
-  * Demo  * Github
+  * Demo  * https://github.com/tobiogundehin/Tobi-s-Paint/tree/paint-v-0.0.1
 
