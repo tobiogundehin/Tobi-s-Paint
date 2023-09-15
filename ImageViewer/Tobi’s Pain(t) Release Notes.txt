@@ -1,0 +1,17 @@
+Tobi’s Pain(t) Version 0.0.1 -  09/08/2023
+New features:
+  * Image opening functionality ( PNG,JPEG,BMP,GIF supported only) through the use of "Open" button
+  * Window maximization, minimization and closing ability
+  * Window now changes name to reflect current file 
+  * “Save As” button functionality with the ability to change file format
+  * “Save” button functionality
+Known issues:
+  * Image files of certain dimensions open in a zoomed in position  
+Expected next sprint:
+  * Image resize to fit in working area 
+  * Line drawing functionality with user-defined line width
+  * Application Name should remain visible at the top of window despite image being open
+  * Application name change to reflect new functionality
+Links:
+  * Demo  * https://github.com/tobiogundehin/Tobi-s-Paint
+
