@@ -1,17 +1,69 @@
+Tobi’s Pain(t) Version 0.0.4 -  10/01/2023
+New features:
+  * Polygons
+  * User-defined shapes
+  * Clear Tab button with warning window
+  * Copy and paste part of image
+  * Move and paste part of image
+  * Eraser tool
+  * Text-Addition tool
+  * Undo and Redo Buttons with a shortcut for undo
+Known issues:
+  * "Clear Tab" Button does not always activate upon first click
+  * “Undo” Button becomes more unreliable when intermingled with use of the redo button for an extended period of time
+  * Shape tools do not have preview functionality
+  * Copy and move do not have preview functionality
+  * Janky layout
+Expected next sprint:
+  * Autosave with in-app clock
+  * Shape previews
+  * Copy and Move Previews
+  * Bug fixes
+  * Warning for changes in file format upon "Save As" request
+Links:
+  * Demo  * https://github.com/tobiogundehin/Tobi-s-Paint/tree/paint-v-0.0.4
+Tobi’s Pain(t) Version 0.0.3 -  09/23/2023
+New features:
+  * New Shapes
+  * Tabs
+  * Smart Save
+  * Straight and Dashed Lines
+Known issues:
+  * Images of certain dimensions don't crop well 
+  * Smart save does not trigger in certain instances
+Expected next sprint:
+  * Undo and Redo
+  * Eraser Tool
+  * Typed Input
+Links:
+  * Demo  * https://github.com/tobiogundehin/Tobi-s-Paint/tree/paint-v-0.0.3
+Tobi’s Pain(t) Version 0.0.2 -  09/15/2023
+New features:
+  * Sketch Ability through the use of the "Draw" button with user-defined line parameters(Color and Width)
+  * Image will be saved with new sketch 
+Known issues:
+  * Images of certain dimensions don't crop well 
+Expected next sprint:
+  * User-Defined shapes and Straight Line
+  * Keyboard-Shortcuts(With Shortcut cheatsheet in Help menu)
+  * Resizeable Canvas
+  * Dashed Lines
+  * Smart Save
+  * Tabs
+Links:
+  * Demo  * https://github.com/tobiogundehin/Tobi-s-Paint/tree/paint-v-0.0.2
 Tobi’s Pain(t) Version 0.0.1 -  09/08/2023
 New features:
-  * Image opening functionality ( PNG,JPEG,BMP,GIF supported only) through the use of "Open" button
+  * Image opening functionality ( PNG,JPEG,BMP,GIF supported only)
   * Window maximization, minimization and closing ability
-  * Window now changes name to reflect current file 
-  * “Save As” button functionality with the ability to change file format
-  * “Save” button functionality
 Known issues:
+  * “Save As” button creates a new file but new file does not contain the current image in workspace
+  * “Save” button does not do any action currently
   * Image files of certain dimensions open in a zoomed in position  
 Expected next sprint:
-  * Image resize to fit in working area 
-  * Line drawing functionality with user-defined line width
-  * Application Name should remain visible at the top of window despite image being open
-  * Application name change to reflect new functionality
+  * “Save As” and “Save” button functionality
+  * Image resize and rotate tool
+  * Zoom in and zoom out functionality
 Links:
-  * Demo  * Github
+  * Demo  * https://github.com/tobiogundehin/Tobi-s-Paint/tree/paint-v-0.0.1
 
